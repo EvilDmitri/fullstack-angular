@@ -1,0 +1,27 @@
+
+<!--<div class="container">-->
+  <!--<div class="row">-->
+    <!--<div class="col-lg-12">-->
+      <!--<h1 class="page-header">Messages:</h1>-->
+      <!--<ul class="nav nav-tabs nav-stacked" ng-repeat="thing in messagesCtrl.messages">-->
+        <!--<li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}</a></li>-->
+      <!--</ul>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="message" ng-repeat="message in messagesCtrl.messages">
+        <div><a href="/message/{{message._id}}">"<b>{{message.name}}</b>" message </a> has next attachments:</div>
+        <ul class="nav nav-tabs nav-stacked" ng-repeat="attachment in message.attachments">
+          <li>{{attachment.filename}}</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
